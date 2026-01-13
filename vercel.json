@@ -4,7 +4,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "vite",
-  "rootDirectory": "java-migration-frontend",
   "rewrites": [
     {
       "source": "/api/(.*)",
