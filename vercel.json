@@ -6,7 +6,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://your-backend-url.onrender.com/api/$1"
+    "destination": "https://java-migration-accelerator-backend.onrender.com/api/$1"
     },
     {
       "source": "/(.*)",
