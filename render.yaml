@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: java-migration-accelerator
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITLAB_TOKEN
+        sync: false
+      - key: SMTP_USERNAME
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SONARQUBE_TOKEN
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11"
