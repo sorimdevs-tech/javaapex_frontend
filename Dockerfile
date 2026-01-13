@@ -1,9 +1,9 @@
 # Multi-stage build: Frontend
 FROM node:18-alpine AS frontend-builder
 WORKDIR /app/frontend
-COPY java-migration-frontend/package*.json ./
+COPY package*.json ./
 RUN npm install
-COPY java-migration-frontend/ ./
+COPY . ./
 RUN npm run build
 
 # Backend stage
