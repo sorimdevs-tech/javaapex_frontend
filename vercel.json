@@ -1,5 +1,4 @@
 {
-  "rootDirectory": "java-migration-frontend",
   "buildCommand": "chmod +x node_modules/.bin/* && npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
