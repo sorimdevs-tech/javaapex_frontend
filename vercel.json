@@ -1,0 +1,18 @@
+{
+  "root": "java-migration-frontend",
+  "buildCommand": "npx tsc -b && npx vite build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install && chmod +x node_modules/.bin/*",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://your-backend-url.onrender.com/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
