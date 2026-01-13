@@ -1,5 +1,4 @@
 {
-  "root": "java-migration-frontend",
   "buildCommand": "npx tsc -b && npx vite build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
