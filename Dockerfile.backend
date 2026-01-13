@@ -11,14 +11,14 @@ RUN apt-get update && apt-get install -y \
     maven \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements
-COPY java-migration-backend/Java_Migration_Accelerator_backend/java-migration-backend/requirements.txt .
+# Copy requirements from the nested backend directory
+COPY ./java-migration-backend/Java_Migration_Accelerator_backend/java-migration-backend/requirements.txt ./requirements.txt
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend source code
-COPY java-migration-backend/Java_Migration_Accelerator_backend/java-migration-backend/ .
+# Copy entire backend directory structure
+COPY ./java-migration-backend/Java_Migration_Accelerator_backend/java-migration-backend/ ./
 
 # Create necessary directories
 RUN mkdir -p /tmp/migrations /app/logs
